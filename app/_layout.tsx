@@ -1,6 +1,7 @@
 import "@/global.css";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import { useCallback } from "react";
 import { View } from "react-native";
 import "react-native-reanimated";
@@ -33,6 +34,7 @@ export default function RootLayout() {
 
 	return (
 		<View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+			<StatusBar style="dark" />
 			<Stack screenOptions={{ headerShown: false }} />
 		</View>
 	);
